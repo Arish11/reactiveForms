@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
 
   onAddHobby(){
     const control = new FormControl(null,Validators.required);
-   (<FormArray> this.signUpForm.get('hobbies')).push(control)
+   (<FormArray> this.signUpForm.get('hobbies')).push(control) //it is imoirtant to typecast a form arry to use array functions on top of it
   }
 
   getControls() {
