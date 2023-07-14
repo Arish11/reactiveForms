@@ -30,6 +30,14 @@
               [value]="gender">{{ gender }}
           </label>
         </div>
+        <div formArrayName="hobbies">
+          <div class="form-group">
+            <button class="btn btn-warning" type="button" (click)="onAddHobby()">Add Hobby</button>
+          </div>
+          <div class="form-group" *ngFor="let hobby of getControls(); let i = index">
+            <input type="text" class="form-control" [formControlName]="i">
+          </div>
+        </div>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
     </div>
